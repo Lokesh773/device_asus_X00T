@@ -4,3 +4,7 @@ allow hal_audio_default sysfs:dir { open read };
 allow hal_audio_default default_prop:file read;
 allow hal_audio_default sysfs_net:dir open;
 allow hal_audio_default self:process execmem;
+
+# Dolby
+allow hal_audio_default hal_dms_default:binder { transfer call };
+allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
