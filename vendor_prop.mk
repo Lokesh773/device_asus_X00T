@@ -102,6 +102,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false \
+    debug.sf.disable_backpressure=1 \
     ro.opengles.version=196610 \
     vendor.display.disable_partial_split=1 \
     vendor.display.disable_rotator_downscale=1 \
