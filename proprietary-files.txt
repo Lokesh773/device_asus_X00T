@@ -968,68 +968,66 @@ vendor/firmware/a512_zap.mdt
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
 
-# Graphics - from LA.UM.8.2.r1-06300-sdm660.0
+# Graphics - from LA.UM.8.2.r1-06500-sdm660.0
 vendor/lib/egl/eglSubDriverAndroid.so|c6c5e68ce670aeab637d29cfd3f7dba45e05e76c
-vendor/lib/egl/libEGL_adreno.so|9df237e09b8340be1d9387d57a7dcff3eb220296
+vendor/lib/egl/libEGL_adreno.so|643998f415d1218737764236ff0e3d7ea292c9c6
 vendor/lib/egl/libGLESv1_CM_adreno.so|35180cd115c1d9dcc7ed33a4add281a365d8ec9c
-vendor/lib/egl/libGLESv2_adreno.so|b0b06b3ecea358db96683b65473d44c301c353f2
+vendor/lib/egl/libGLESv2_adreno.so|5c705174a339658f957df31289a3cfeac046b3cd
 vendor/lib/egl/libq3dtools_adreno.so|5d25d3f8d5f5e86f6d1b83df3a15561ff257756d
-vendor/lib/egl/libq3dtools_esx.so|edae14e06bdff630c0dabe2976ca9c4afe6a595b
-vendor/lib/egl/libQTapGLES.so|77b969c6a63639952b7506e31713f8799a35cfc3
+vendor/lib/egl/libq3dtools_esx.so|7c6aa9dc7436ae521c35a0a215bc2fc530bbd685
+vendor/lib/egl/libQTapGLES.so|975064778f19c1ca8d8c3d4dcd1fda06ef62572a
 vendor/lib/libadreno_utils.so|1fd9e4a6dbfd6370acbb1ebdfaf39724fb78bd85
 vendor/lib/libbccQTI.so|0be327b62b993d09953fc0758fbf19672d58d3ec
 vendor/lib/libC2D2.so|c189d8794a261824b8fdeca4e65d63eb92c0cc0a
-vendor/lib/libc2d30_bltlib.so|065287859efcbf93383e73a8bb0a686101fc299b
-vendor/lib/libCB.so|21c4bb52fd64b92721e6d223b93444533211ab8a
+vendor/lib/libc2d30_bltlib.so|0baf85bbde259bd0bc76425d7b5b09760761471d
+vendor/lib/libCB.so|e54143b886ffe2daeaf68f9bcc8ec33522bf7a93
 vendor/lib/libgsl.so|362dd0e842728b64701d802e8689ec6941c339fc
-vendor/lib/libllvm-glnext.so|ebc1ea6b5936ed085314686c579448ae167b4850
+vendor/lib/libllvm-glnext.so|3d62be288d20d03928c6fa1321f53b4e2611c5fe
 vendor/lib/libllvm-qcom.so|ed7ab3f3e2e8f709f55caa750283c50e2c6d2045
 vendor/lib/libOpenCL.so|6fe1ec3442653efedf49f64aa9301e0ed91abac0
 vendor/lib/librs_adreno.so|11eaa78d76d9f0e5f34ce5db2b08d5039171e4c9
-vendor/lib/librs_adreno_sha1.so|35457affcdc3c7e5a7dafe4a18eac88a956aea04
+vendor/lib/librs_adreno_sha1.so|1e33b1d234a15359f5caed506fdc9091bdc50ebf
 vendor/lib/libRSDriver_adreno.so|5d5c9310505ab6b2a42006118e87fd8489d525d1
 vendor/lib64/egl/eglSubDriverAndroid.so|2b38ee35a5e66fcb222dfe30407ce7274f4c89b6
-vendor/lib64/egl/libEGL_adreno.so|7a14e5b6fcb2025ebf3e4d691032ec2adef98ae5
+vendor/lib64/egl/libEGL_adreno.so|e7a24af960182dc06474be9f5bafc65644ee0628
 vendor/lib64/egl/libGLESv1_CM_adreno.so|ee3604131af93e38baaf0cdff49523514cd1f1b2
-vendor/lib64/egl/libGLESv2_adreno.so|6ca54c26661bee51a29d3dc5a4a8698048fe1a36
+vendor/lib64/egl/libGLESv2_adreno.so|4ecfb72d9fe10929b5de8d9e1a489d9f5fbbc890
 vendor/lib64/egl/libq3dtools_adreno.so|07c3b406aa055abfdb3358833d02cb5133964d37
-vendor/lib64/egl/libq3dtools_esx.so|b370b1485f96c09e21204c77efeadd0bfed6acd3
-vendor/lib64/egl/libQTapGLES.so|3b4bb2ba37ec84a4134816e7ca25d3ed9a806162
+vendor/lib64/egl/libq3dtools_esx.so|8c798aff650d25ed3fb5decdab1e652c4726508d
+vendor/lib64/egl/libQTapGLES.so|05200db46341826aa9650004f898e1156746d753
 vendor/lib64/libadreno_utils.so|b46bdecaef58fbf040b7a472d54ad19b6b34b26d
 vendor/lib64/libbccQTI.so|42fdea81ea505ccadbf6d24af7ba37cf83760391
 vendor/lib64/libC2D2.so|802802ac7ce0bb8bfc6918449a89ec820c6cfd53
-vendor/lib64/libc2d30_bltlib.so|f308185ec20049368c6f417ebeed3e6d84e26e2f
-vendor/lib64/libCB.so|d59784d664c1e5e7eb71f548d7f21e18b86fd5ce
+vendor/lib64/libc2d30_bltlib.so|f76972674b571b32356c055c7703d33abfeeb3b9
+vendor/lib64/libCB.so|d586f90ad28bee0b5956c962ea773db8ee5f0443
 vendor/lib64/libgsl.so|5d237f23c0e410ad73008e3a18c1d49e8e31fa6b
-vendor/lib64/libllvm-glnext.so|76d7b71cb209d8abc5952d8fc66fc1577f8055f1
+vendor/lib64/libllvm-glnext.so|be38cc2cc3293f0adbdabd0859b65ec9813354de
 vendor/lib64/libllvm-qcom.so|f405f07c443129f0a82c87b528d690e26afcbe4e
 vendor/lib64/libOpenCL.so|d6bb350254707592d6f6360c06d4c3336f8f1155
 vendor/lib64/librs_adreno.so|3d0a23777e7bdd979a0c84d9da731ae15d58af68
-vendor/lib64/librs_adreno_sha1.so|7620b3f4a2ba4976468a9381a85c612d7a7e72df
+vendor/lib64/librs_adreno_sha1.so|daa5716f05901c92b2b2beb2507d10a3b2f45744
 vendor/lib64/libRSDriver_adreno.so|b3d5f6b891f6ef0e8f079609d2722f1c29d28c8b
 
-# Graphics (HDR) - from LA.UM.8.2.r1-06300-sdm660.0
+# Graphics (HDR) - from LA.UM.8.2.r1-06500-sdm660.0
 vendor/lib/libhdr_tm.so|0104cdb2789ab1fb54b6b93564300f13ffeefc39
 vendor/lib64/libhdr_tm.so|0744584d9e30a921898695c89e96293901437c08
 
-# Graphics (SDM) - from LA.UM.8.2.r1-06300-sdm660.0
+# Graphics (SDM) - from LA.UM.8.2.r1-06500-sdm660.0
 vendor/lib/libqseed3.so|344d2ce1fe3670f4b0a832a85bd725c4bdb14329
+vendor/lib/libsdm-color.so|1f276692d7c70ca006f4e2efc087ddb22379328b
 vendor/lib/libsdm-diag.so|fa211dd848a93242e84d1b7fdc5fcf6cb9c25c2f
-vendor/lib/libsdmextension.so|c3aa8d5f17661087051eff78ee2828737d8f27bc
+vendor/lib/libsdmextension.so|90ae18ba592d559c27c8e9448a3dd21a6d806924
 vendor/lib/libtinyxml2_1.so|89e1b1af10209dbb8d341cd314750cc64fc33852
 vendor/lib64/libqseed3.so|6779aaf96283e244122f4cc76cd3cb750ff14ed5
+vendor/lib64/libsdm-color.so|b32ee158af17cb806cba21719ab75cfe7fc1ac5a
 vendor/lib64/libsdm-diag.so|db4c495e3e64ea0cbc0d079a2aa16862a9b02192
 vendor/lib64/libsdm-disp-vndapis.so|92fe3602eaaae1847965e8886d2cbef3d0a801f8
-vendor/lib64/libsdmextension.so|0397497f0ff65b624acaa197f05a15fbe67cc525
+vendor/lib64/libsdmextension.so|fc3812a024861b2d84d3eacab1cc8456d29531c4
 vendor/lib64/libtinyxml2_1.so|70942325afdd14eedcf11b3fbbfbc3d98f42f8dc
 
-# Graphics (SDM) - from LA.UM.8.2.r1-05700-sdm660.0
-vendor/lib/libsdm-color.so|325c5b6cff3cf3d7d5d8e479a1c37f7255cbf748
-vendor/lib64/libsdm-color.so|b5e5ec9f5cdad2094891197fd00f8ccdc8340c06
-
-# Graphics (Vulkan) - from LA.UM.8.2.r1-06300-sdm660.0
-vendor/lib/hw/vulkan.sdm660.so|333d1cc56934de6fe6f5114d924a3c48f3347ca0
-vendor/lib64/hw/vulkan.sdm660.so|7a9b0ae60ab0eb6d0b896d35b8c47c4531c140b9
+# Graphics (Vulkan) - from LA.UM.8.2.r1-06500-sdm660.0
+vendor/lib/hw/vulkan.sdm660.so|6e9d88699794d4d0276df7a9c72dfc111990c1d3
+vendor/lib64/hw/vulkan.sdm660.so|22c77325ef5bbec74f536b7857f06be03a654327
 
 # Keymaster - from LA.UM.8.2.r1-06200-sdm660.0
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|de22b6873a674d48959ac5885b49cbff417b287a
