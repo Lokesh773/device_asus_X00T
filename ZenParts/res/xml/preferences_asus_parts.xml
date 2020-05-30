@@ -76,6 +76,29 @@
                  android:summary="@string/ambient_display_gestures_summary"
                  android:title="@string/ambient_display_gestures_title"
                  android:icon="@drawable/ic_ambient" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
+        android:key="boost"
+        android:title="@string/boost_title" >
+
+        <com.asus.zenparts.preferences.SecureSettingListPreference
+            android:key="gpuboost"
+            android:dialogTitle="@string/gpuboost_dialogTitle"
+            android:entries="@array/gpuboost_profiles"
+            android:entryValues="@array/gpuboost_values"
+            android:icon="@drawable/ic_gpuboost" 
+            android:defaultValue="0"
+            android:title="@string/gpuboost_title" />
+
+        <com.asus.zenparts.preferences.SecureSettingListPreference
+            android:key="cpuboost"
+            android:dialogTitle="@string/cpuboost_dialogTitle"
+            android:entries="@array/cpuboost_profiles"
+            android:entryValues="@array/cpuboost_values"
+            android:icon="@drawable/ic_cpuboost" 
+            android:defaultValue="0"
+            android:title="@string/cpuboost_title" />
     </PreferenceCategory>
 
     <PreferenceCategory

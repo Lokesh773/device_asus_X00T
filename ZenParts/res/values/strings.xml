@@ -186,4 +186,22 @@
     <string name="touchscreen_gesture_haptic_feedback">Haptic feedback</string>
     <string name="touchscreen_gesture_haptic_feedback_summary">Vibrate when a ambient gesture is detected</string>
 
+    <!-- Boosts -->
+    <string name="boost_title">Boost</string>
+    <string name="gpuboost_title">GPU Boost</string>
+    <string name="cpuboost_title">CPU Boost</string>
+    <string name="gpuboost_dialogTitle">Select your GPU Boost level</string>
+    <string name="cpuboost_dialogTitle">Select your CPU Boost level</string>
+
+    <!-- GPU/CPU Boost Presets -->
+    <string name="gpuboost_high">High</string>
+    <string name="gpuboost_medium">Medium</string>
+    <string name="gpuboost_low">Low</string>
+    <string name="gpuboost_disable">Disable</string>
+
+    <string name="cpuboost_high">High</string>
+    <string name="cpuboost_medium">Medium</string>
+    <string name="cpuboost_low">Low</string>
+    <string name="cpuboost_disable">Disable</string>
+
 </resources>
