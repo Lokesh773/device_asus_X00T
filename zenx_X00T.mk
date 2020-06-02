@@ -43,6 +43,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys
 
 ZENX_BUILD_TYPE := OFFICIAL
+ro.os.maintainer := gec.plkd.group6
 
 # The following system and vendor props will be set by vendor init
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
