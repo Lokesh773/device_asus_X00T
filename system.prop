@@ -220,3 +220,10 @@ ro.vendor.qti.config.zram=true
 
 # Leds
 persist.asus.led.on=1
+
+# USB debugging
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.usb.config=mtp,adb \
+ro.adb.secure=0 \
+ro.secure=0 \
+ro.debuggable=1
