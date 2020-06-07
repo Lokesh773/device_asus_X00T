@@ -621,5 +621,7 @@
 
     <!-- Whether or not we should show vendor mismatch message -->
     <bool name="config_show_vendor_mismatch_message">false</bool>
-    
+    <!-- Sets the package name for device parts-->
+    <string name="config_device_parts_package_name" translatable="false">com.asus.zenparts</string>
+    <string name="config_device_parts_package_activity" translatable="false">com.asus.zenparts.DeviceSettingsActivity</string>    
 </resources>
