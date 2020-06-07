@@ -42,7 +42,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys
 
-ZENX_BUILD_TYPE := OFFICIAL
+export ZENX_BUILD_TYPE=Official
 
 
 # The following system and vendor props will be set by vendor init
