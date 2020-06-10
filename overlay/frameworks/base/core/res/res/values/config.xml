@@ -128,6 +128,9 @@
          that can be set by the user. -->
     <integer name="config_screenBrightnessDim">10</integer>
 
+    <!-- Use new ScreenRec Encoding. -->
+    <bool name="config_useNewScreenRecEncoder">true</bool>
+
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
     <integer name="config_screenBrightnessSettingDefault">40</integer>
