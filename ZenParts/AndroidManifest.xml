@@ -88,10 +88,7 @@
         </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.android.touch.gestures.TouchscreenGestureSettings"
-            android:theme="@style/CustomOptionsTheme">
-        </activity>
+   
 
         <service
             android:name=".ZenpartsTile"
