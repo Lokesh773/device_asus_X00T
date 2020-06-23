@@ -624,4 +624,6 @@
     <!-- Sets the package name for device parts-->
     <string name="config_device_parts_package_name" translatable="false">com.asus.zenparts</string>
     <string name="config_device_parts_package_activity" translatable="false">com.asus.zenparts.DeviceSettingsActivity</string>    
+
+    <dimen name="status_bar_height_portrait">94.0px</dimen>
 </resources>
