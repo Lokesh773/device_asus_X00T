@@ -544,7 +544,5 @@ PRODUCT_COPY_FILES += \
 # Zen Parts
 PRODUCT_PACKAGES += \
     ZenParts
-#ToucGestures
-PRODUCT_PACKAGES += \
-    TouchGestures
+
 $(call inherit-product, vendor/asus/X00T/X00T-vendor.mk)
