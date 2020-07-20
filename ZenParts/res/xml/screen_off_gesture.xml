@@ -31,78 +31,67 @@
                 android:key="gesture_double_tap"
                 android:title="@string/gesture_double_tap_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-                android:icon="@drawable/ic_doubletap" />
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_v"
                 android:title="@string/gesture_v_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-                android:icon="@drawable/ic_letterv" />
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_s"
                 android:title="@string/gesture_s_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-                android:icon="@drawable/ic_letters" />
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_z"
                 android:title="@string/gesture_z_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-        	android:icon="@drawable/ic_letterz" />
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_w"
                 android:title="@string/gesture_w_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-                android:icon="@drawable/ic_letterw" />
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_c"
                 android:title="@string/gesture_c_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-                android:icon="@drawable/ic_letterc" />
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_e"
                 android:title="@string/gesture_e_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-		android:icon="@drawable/ic_lettere" />
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_up"
                 android:title="@string/gesture_up_title"
                 android:persistent="false"
-                android:dependency="enable_gestures" 
-		android:icon="@drawable/ic_swipeup"/>
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_down"
                 android:title="@string/gesture_down_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-		android:icon="@drawable/ic_swipedown"/>
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_left"
                 android:title="@string/gesture_left_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-		android:icon="@drawable/ic_swipeleft" />
+                android:dependency="enable_gestures" />
 
             <Preference
                 android:key="gesture_right"
                 android:title="@string/gesture_right_title"
                 android:persistent="false"
-                android:dependency="enable_gestures"
-		android:icon="@drawable/ic_swiperight" />
+                android:dependency="enable_gestures" />
 
         </PreferenceCategory>
 
