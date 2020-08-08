@@ -31,7 +31,7 @@ import java.io.File;
 
 public final class KernelControl {
 
-    private static String GESTURE_PATH = "/sys/kernel/touchpanel/gesture_node";
+    private static String GESTURE_PATH = "/sys/kernel/touchpanel/dclicknode";
     public static final String SLIDER_SWAP_NODE = "/proc/s1302/key_rep";
 
     private KernelControl() {
