@@ -1,0 +1,169 @@
+# Initialization
+on property:sys.boot_completed=1
+
+# Set default profile on first boot
+    exec u:r:init:s0 root root -- /vendor/bin/init.spectrum.sh
+    exec u:r:magisk:s0 root root -- /vendor/bin/init.spectrum.sh
+    exec u:r:su:s0 root root -- /vendor/bin/init.spectrum.sh
+
+# Enable Spectrum support
+   setprop spectrum.support 1
+
+# Add kernel name
+   setprop persist.spectrum.kernel --S-M-O-K-E-Y--
+
+# Balance (default profile)
+on property:persist.spectrum.profile=0
+    # CPU
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+	
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/interactive/*
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/interactive/*
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/interactive/* 
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/interactive/*
+	
+	
+	
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1113000
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1958400
+	write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "20000 1401600:40000"
+	write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 85
+	write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 20000
+	write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1401600
+	write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 0
+	write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1401600:80"
+	write /sys/module/msm_performance/parameters/touchboost 1
+	write /sys/module/workqueue/parameters/power_efficient Y
+
+   	# GPU
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 192000000
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 465000000
+    	write /sys/class/kgsl/kgsl-3d0/max_gpuclk 465000000
+
+
+# Performance
+on property:persist.spectrum.profile=1
+    # CPU
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+	
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/schedutil/*
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/schedutil/*
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/schedutil/* 
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/schedutil/*
+	
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 633600
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1612800
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "schedutil"
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1401600
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2150400
+	write /sys/module/msm_performance/parameters/touchboost 1
+ 	write /sys/module/workqueue/parameters/power_efficient N
+
+    	# GPU
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adeno-tz"
+	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 192000000
+	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 465000000
+	write /sys/class/kgsl/kgsl-3d0/max_gpuclk 465000000
+
+
+# Battery
+on property:persist.spectrum.profile=2
+    	# CPU
+    	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+	
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/darknessv5/*
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/darknessv5/*
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/darknessv5/* 
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/darknessv5/*
+	
+	
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "darknessv5"
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 633600
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 140100
+    	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "darknessv5"
+    	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 6336000
+    	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1747200
+    	write /sys/module/msm_performance/parameters/touchboost 0
+    	write /sys/module/workqueue/parameters/power_efficient Y
+
+    	# GPU
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 160000000
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 370000000
+    	write /sys/class/kgsl/kgsl-3d0/max_gpuclk 370000000
+
+
+# Gaming
+on property:persist.spectrum.profile=3
+    	# CPU
+    	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+	
+	chown system system /sys/devices/system/cpu/cpu0/cpufreq/performance/*
+	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/performance/*
+	chown system system /sys/devices/system/cpu/cpu4/cpufreq/performance/* 
+	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/performance/*
+	
+	
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "performance"
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 633600
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1612800
+    	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "performance"
+    	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 1401600
+    	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2208000
+    	write /sys/module/msm_performance/parameters/touchboost 1
+    	write /sys/module/workqueue/parameters/power_efficient N
+
+    	# GPU
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "performance"
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 192000000
+    	write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 465000000
+    	write /sys/class/kgsl/kgsl-3d0/max_gpuclk 465000000
+
+

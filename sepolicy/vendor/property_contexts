@@ -32,3 +32,4 @@ persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_p
 persist.zenparts.gpu_profile           u:object_r:boosts_prop:s0
 persist.zenparts.cpu_profile           u:object_r:boosts_prop:s0
 
+

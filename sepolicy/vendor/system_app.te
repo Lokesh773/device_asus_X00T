@@ -31,3 +31,6 @@ allow system_app sysfs_battery_supply:file { read };
 allow system_app sysfs_battery_supply:file { open };
 allow system_app sysfs_battery_supply:file { getattr };
 
+#spectrum
+allow system_app spectrum_prop:property_service set;
+get_prop(system_app, spectrum_prop);
