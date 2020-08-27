@@ -59,8 +59,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
-    private static final String PREF_SPECTRUM = "spectrum";
-    private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
+    public static final String PREF_SPECTRUM = "spectrum";
+    public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
     private static final String SELINUX_CATEGORY = "selinux";
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
