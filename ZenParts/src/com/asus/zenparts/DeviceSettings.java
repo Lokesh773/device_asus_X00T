@@ -59,6 +59,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
     public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
 
+    private static final String PREF_SPECTRUM = "spectrum";
+    private static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
     private static final String SELINUX_CATEGORY = "selinux";
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
@@ -78,7 +80,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private SecureSettingListPreference mCPUBOOST;
     private Preference mKcal;
     private Preference mAmbientPref;
-
+    private SecureSettingListPreference mSPECTRUM;
     private SecureSettingSwitchPreference mBacklightDimmer;
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
@@ -111,6 +113,12 @@ public class DeviceSettings extends PreferenceFragment implements
         mCPUBOOST.setValue(FileUtils.getStringProp(CPUBOOST_SYSTEM_PROPERTY, "0"));
         mCPUBOOST.setSummary(mCPUBOOST.getEntry());
         mCPUBOOST.setOnPreferenceChangeListener(this);
+
+        mSPECTRUM = (SecureSettingListPreference) findPreference(PREF_SPECTRUM);
+        mSPECTRUM.setValue(FileUtils.getStringProp(SPECTRUM_SYSTEM_PROPERTY, "0"));
+        mSPECTRUM.setSummary(mSPECTRUM.getEntry());
+        mSPECTRUM.setOnPreferenceChangeListener(this);
+
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null) {
@@ -174,7 +182,11 @@ public class DeviceSettings extends PreferenceFragment implements
             case PREF_MICROPHONE_GAIN:
                 FileUtils.setValue(MICROPHONE_GAIN_PATH, (int) value);
                 break;
-
+           case PREF_SPECTRUM:
+                mSPECTRUM.setValue((String) value);
+                mSPECTRUM.setSummary(mSPECTRUM.getEntry());
+                FileUtils.setStringProp(SPECTRUM_SYSTEM_PROPERTY, (String) value);
+                break;
             case PREF_SELINUX_MODE:
                 if (preference == mSelinuxMode) {
 		              boolean enabled = (Boolean) value;

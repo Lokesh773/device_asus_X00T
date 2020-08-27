@@ -131,6 +131,18 @@
     <!-- Device specific settings -->
     <string name="device_settings_app_name">Advanced settings</string>
 
+    <!-- Spectrum Profiles -->
+    <string name="spectrum_profile_title">Spectrum</string>
+    <string name="spectrum_title">Spectrum Profiles</string>
+    <string name="spectrum_summary">Choose your Spectrum Profiles</string>
+    <string name="spectrum_dialogTitle">Choose your Spectrum Profiles</string>
+
+    <!-- Values for Spectrum Presets -->
+    <string name="spectrum_performance">Performance</string>
+    <string name="spectrum_battery">Battery</string>
+    <string name="spectrum_gaming">Gaming</string>
+    <string name="spectrum_balance">Balance</string>
+
     <!-- Selinux Switch -->
     <string name="selinux_category">SELinux</string>
     <string name="selinux_explanation_summary">SELinux is a set of kernel modifications and user-space tools. Changing modes can cause unwanted effects. Use at your own risk.</string>
