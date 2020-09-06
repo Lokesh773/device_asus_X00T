@@ -54,3 +54,9 @@ PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
     ro.vendor.product.device \
     ro.vendor.product.name \
     ro.vendor.product.model
+
+#Minimal_apps
+TARGET_MINIMAL_APPS := true
+
+#Gapps
+TARGET_GAPPS_ARCH := arm64
