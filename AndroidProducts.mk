@@ -15,7 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixys_X00TD.mk
+    $(LOCAL_DIR)/zenx_X00TD.mk
 
 COMMON_LUNCH_CHOICES := \
-    pixys_X00TD-userdebug \
+    zenx_X00TD-userdebug \
+    zenx_X00TD-eng \
